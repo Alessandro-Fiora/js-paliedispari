@@ -27,3 +27,33 @@ function isPalindrome(word) {
   // * Se passo tutto il ciclo e arrivo qui, gli array hanno tutti i caratteri uguali, quindi ritono true
   return true;
 }
+
+/**
+ * Returns a random integer number between two numbers
+ * @param {Number} min Min number of the interval
+ * @param {Number} max Min number of the interval
+ * @returns {Number} a random integer number between min and max
+ */
+function randomNumberInterval(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+/**
+ * Checks if a number is a valid number and is between two values
+ * @param {Number} num Number to check for validity
+ * @param {Number} min Min possible value
+ * @param {Number} max Max possible value
+ * @returns {Boolean}
+ */
+function isNumberValid(num, min, max) {
+  return !isNaN(num) && num >= min && num <= max ? true : false;
+}
+/**
+ * Checks if a word is included in a list of words
+ * @param {String} word Word to check for validity
+ * @param {Array} whitelist Array of possible values
+ * @returns {Boolean}
+ */
+function isWordValid(word, whitelist = []) {
+  return whitelist.includes(word);
+}
