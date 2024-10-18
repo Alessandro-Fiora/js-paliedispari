@@ -57,3 +57,29 @@ function isNumberValid(num, min, max) {
 function isWordValid(word, whitelist = []) {
   return whitelist.includes(word);
 }
+
+/**
+ * Checks if a number is even
+ * @param {Number} num Number to check
+ * @returns {Boolean}
+ */
+function isNumberEven(num) {
+  console.log("isNumberEven: " + (num % 2 === 0));
+
+  return num % 2 == 0;
+}
+
+/**
+ * Checks if user is the winner
+ * @param {Number} userNumber User number
+ * @param {Number} opponentNumber Opponent number
+ * @param {String} userChoice Choice between 'pari' and 'dispari'
+ * @returns {Boolean}
+ */
+function isUserWinner(userNumber, opponentNumber, userChoice) {
+  const sum = userNumber + opponentNumber;
+  return (
+    (isNumberEven(sum) && userChoice === "pari") ||
+    (!isNumberEven(sum) && userChoice === "dispari")
+  );
+}

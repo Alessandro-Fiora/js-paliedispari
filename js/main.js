@@ -44,3 +44,9 @@ while (!isNumberValid(userNumber, minNumber, maxNumber)) {
 
 // * Genero numero casuale per PC
 const pcNumber = randomNumberInterval(minNumber, maxNumber);
+
+alert(
+  isUserWinner(userNumber, pcNumber, userChoice)
+    ? "Hai vinto!"
+    : "Ha vinto il PC!"
+);
