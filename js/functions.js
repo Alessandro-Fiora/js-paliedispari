@@ -12,12 +12,9 @@ function isPalindrome(word) {
 
   // * Genero un array inverso con i caratteri della parola al contrario
   const wordArrayReversed = wordArray.toReversed();
-  // console.log(wordArray, wordArrayReversed);
 
   // * Per ogni carattere dell'array della parola controllo che sia uguale al carattere corrispondente nell'array inverso
   for (let i = 0; i < wordArray.length; i++) {
-    // console.log(wordArray[i], wordArrayReversed[i]);
-
     // * Se ne trovo uno diverso esco dal ciclo e ritorno FALSE
     if (wordArray[i] !== wordArrayReversed[i]) {
       return false;
@@ -64,8 +61,6 @@ function isWordValid(word, whitelist = []) {
  * @returns {Boolean}
  */
 function isNumberEven(num) {
-  console.log("isNumberEven: " + (num % 2 === 0));
-
   return num % 2 == 0;
 }
 
